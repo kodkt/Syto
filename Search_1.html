@@ -1,0 +1,2841 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Adaptation</title>
+<style>
+	body{
+		margin: 0px;
+	}
+		/*Адаптация под большие экраны*/
+	#frm{
+		width: 800px;
+		height: auto;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	#dv1{
+		top:0;
+		left: 0;
+		height: auto;
+		width: 100%;
+		text-align: right;
+		margin-top: 10px;
+	}
+	#dv2{
+		margin: 0 auto;
+		margin-top: 20px;
+		height: auto;
+		width: 600px;
+		font-size: 0;
+	}
+	#dv3{
+		margin: 0 auto;
+		width: 700px;
+		height: auto;
+		text-align: center;
+	}
+	#dv3 p{
+		margin: 0px;
+		font-size: 16pt;
+		font-family: Arial;
+		color: #339FD4;
+	}
+	#vyvid{
+		width: 600px;
+		height: 30px;
+		margin-top: 10px;
+		background-color:#F4F4F4;
+		border: 1px solid #888888;
+		border-radius: 20px;
+		cursor: default;
+		font-family: Arial;
+		padding-left: 20px;
+		color: #888888;
+		font-size: 14pt;
+	}
+	#srchbtn{
+		margin: 0 auto;
+		margin-top: 20px;
+		border-radius: 20px;
+		border: none;
+		background-color: #004FA8;
+		height: 36px;
+		width: 300px;
+		font-family: Verdana;
+		font-size: 14pt;
+		color: white;
+		display: block;
+		cursor: pointer;
+	}
+	#srchbtn:hover{
+		transition: 1s;
+		box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+	}
+	.lang{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+		border: 2px solid #339FD4;
+		border-radius: 23px;
+		cursor: pointer;
+	}
+	#langua{
+		background-image: url(1-1-1.png);
+		background-position: center;
+		background-size: contain;
+	}
+	#langua:hover{
+		background-image:url(1-1-1.png);
+	}
+	#langrus{
+		background-image:url(2-1-2.png);
+		background-position: center;
+		background-size: contain;
+	}	
+	#langrus:hover{
+		background-image:url(2-2-2.png);
+	}
+	#langen{
+		margin-right: 20px;
+		background-image:url(3-1-3.png);
+		background-position: center;
+		background-size: contain;
+	}
+	#langen:hover{
+		background-image:url(3-3-3.png);
+	}
+	#logo{
+		margin: 0 auto;
+		background-image:url(logo.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 100px;
+		width: auto;
+		margin-top: -40px;
+	}
+	#nav{
+		padding-bottom: 10px;
+		width: 100%;
+		height: 20px;
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+	.navp{
+		font-size: 12pt;
+		font-family: Arial;
+		font-weight: bolder;
+		color: #004FA8;
+		margin: 0px;
+		display: inline-block;
+		cursor: pointer;
+		margin-right: 10px;
+		text-align: center;
+		border-radius: 20px;
+		border: 2px solid #339FD4;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#navp1{
+		width: 140px;
+		background-color:#88CAEA; 
+	}
+	#navp2{
+		width: 80px;
+	}
+	#navp3{
+		width: 70px;
+	}
+	#navp4{
+		width: 40px;
+	}
+	#bgc{
+		width: auto;
+		height: auto;
+	}
+	.divcol1{
+		width: 50%;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	.divcol2{
+		width: 50%;
+		height: 30px;
+		display: inline-flex;
+		align-items: center;
+	}
+	.col1txt{
+		font-size: 11pt;
+		font-family: Arial;
+		margin: 0px;
+		text-align: right;
+		margin-right: 20px;
+	}
+	
+	.inpcl{
+		width: 300px;
+		height: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border: 1px solid #888888;
+	}
+		
+	.checktype{
+		display: inline-block;
+	}
+	.labeltype{
+		display: inline-block;
+		font-size: 11pt;
+		font-family: Arial;
+	}
+	.contdivtype{
+		width: 250px;
+		height: auto;
+		margin-bottom: 5px;
+	}
+	.divtype{
+		display: inline-block;
+		width: 50px;
+		height: auto;
+	}
+	#dc3{
+		display: none;
+	}
+	#dcc3{
+		display: none;
+	}
+	#dc4{
+		display: none;
+	}
+	#dcc4{
+		display: none;
+	}
+	#dc12{
+		display: none;
+	}
+	#dcc12{
+		display: none;
+	}
+	#dc13{
+		display: none;
+	}
+	#dcc13{
+		display: none;
+	}
+	#dc14{
+		display: none;
+	}
+	#dcc14{
+		display: none;
+	}
+	#dc15{
+		display: none;
+	}
+	#dcc15{
+		display: none;
+	}
+	#dc16{
+		display: none;
+	}
+	#dcc16{
+		display: none;
+	}
+	#dc7{
+		height: 60px;
+		
+	}
+	#dcc7{
+		height: 60px;
+	}
+	#dtype1{
+		margin-bottom: 5px;
+	}
+	#dtype2{
+		margin-bottom: 5px;
+	}
+	#dtype3{
+		margin-bottom: 5px;
+	}
+	#dtype4{
+		margin-bottom: 5px;
+	}
+	#dtype5{
+		margin-bottom: 5px;
+	}
+	#contdiap{
+		width: 190px;
+		font-size: 11pt;
+		font-family: Arial;
+	}
+	#dcc8{
+		display: inline-flex;
+		text-align: left;
+	}
+	#pdiap1{
+		margin: 0px;
+		width: 30px;
+		display: inline-block;
+	}
+	#pdiap2{
+		margin: 0px;
+		margin-left: 15px;
+		width: 30px;
+		display: inline-block;
+	}
+	.diapinp{
+		margin: 0px;
+		display: inline-block;
+		width: 50px;
+		border: 1px solid #888888;
+	}
+	#dcc10{
+		display: inline-flex;
+		text-align: left;
+	}
+	#contmerezhi1{
+		width: auto;
+		margin-right: 10px;
+	}
+	#contmerezhi2{
+		width: auto;
+		margin-right: 10px;
+	}
+	#contmerezhi3{
+		width: auto;
+		margin-right: 5px;
+	}
+	.regions{
+		width: 50px;
+		text-align: left;
+	}
+	#forsearch{
+		display: none;
+	}
+	#clr{font-family: Arial;
+		height: 100%;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 11pt;
+		color: #1586A8;
+		margin: 0px;
+		width: 95px;
+		float: right;
+		text-align: center;
+	}
+	#clr:hover{
+		text-decoration: underline;
+	}
+	#pformal{
+		font-size: 14pt;
+		font-family: Arial;
+		margin: 0px;
+		text-align: center;
+		margin-left: 90px;
+		margin-bottom: 10px;
+		color: #339FD4;
+		display: inline-block;
+	}
+	.pinfo{
+		font-size: 14pt;
+		width: 14pt;
+		line-height: 14pt;
+		border: 1px solid #1586A8;
+		border-radius: 13px;
+		background-color: #339FD4;
+		margin-left: 5px;
+		text-align: center;
+		color: white;
+		font-family: Arial;
+	}
+	.pinfo:hover{
+		background-color: #004FA8;
+		cursor: help;
+	}
+	/*Адаптация под средние экраны*/
+	@media (max-width: 991.98px){
+	
+	}
+		/*Адаптация под мобильные устройства */
+	@media (max-width:575.98px){
+	
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<script type="text/javascript">
+	function strt(){
+		//---------------------------------------- скрипт Google Custom Search
+		(function() {
+         var cx = '014609432202407487452:ermobbaaahg';
+		 var gcse = document.createElement('script');
+         gcse.type = 'text/javascript';
+         gcse.async = true;
+         gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(gcse, s);
+		})();
+		//---------------------------------------- Контейнер з меню
+		var div = document.createElement('div');
+		div.id="dv1";
+		document.body.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.className="lang";
+		div.id="langua";
+		div.title="Українська";
+		div.onclick = function multi1(){	
+			document.getElementById('pformal').textContent="Формулювання запиту";
+			
+			document.getElementById('langua').title="Українська";
+			document.getElementById('langrus').title="Російська";
+			document.getElementById('langen').title="Англійська";
+			document.getElementById('langua').style.backgroundImage="url(1-1-1.png)";
+			document.getElementById('langrus').style.backgroundImage="url(2-1-2.png)";
+			document.getElementById('langen').style.backgroundImage="url(3-1-3.png)";
+			
+			document.getElementById('pi1').title="Введіть у поле свій запит";
+			document.getElementById('pi2').title="Поле для додаткового запиту";
+			document.getElementById('pi3').title="Введіть слово, значення якого потрібно знайти";
+			document.getElementById('pi4').title="Введіть назву фільму, який потрібно знайти";
+			document.getElementById('pi5').title="Введіть у поле слова, які потрібно включити у пошук";
+			document.getElementById('pi6').title="Введіть у поле слова, які потрібно виключити з пошуку";
+			document.getElementById('pi7').title="Заповніть поля для пошуку вартості. Ціна вказана у доларах";
+			document.getElementById('pi8').title="Введіть URL сайту для пошуку";
+			document.getElementById('pi9').title="Введіть URL сайту для пошуку подібних сайтів";
+			document.getElementById('pi10').title="Введіть слова для пошуку у Title";
+			document.getElementById('pi11').title="Введіть слово для пошуку у URL";
+			document.getElementById('pi12').title="Введіть слово для пошуку на сайті";
+			document.getElementById('pi13').title="Введіть слова для пошуку на сайті";
+			
+			
+			document.getElementById('navp1').textContent="Загальний пошук";
+			document.getElementById('navp2').textContent="Значення";
+			document.getElementById('navp3').textContent="Фільми";
+			document.getElementById('navp4').textContent="Веб";
+			document.getElementById('clr').textContent="Очистити все";
+			
+			document.getElementById('navp1').title="Загальний пошук";
+			document.getElementById('navp2').title="Пошук значення слова";
+			document.getElementById('navp3').title="Пошук фільмів";
+			document.getElementById('navp4').title="Веб пошук";
+			document.getElementById('clr').title="Натисніть для очищення всіх полів";
+			
+			document.getElementById('p1').textContent="Запит:";
+			document.getElementById('p2').textContent="Альтернативний запит:";
+			document.getElementById('p3').textContent="Значення слова:";
+			document.getElementById('p4').textContent="Назва фільму:";
+			document.getElementById('p5').textContent="Включити слова:";
+			document.getElementById('p6').textContent="Виключити слова:";
+			document.getElementById('p7').textContent="Тип файлу:";
+			document.getElementById('p8').textContent="Діапазон цін:";
+			document.getElementById('pdiap1').textContent="від";
+			document.getElementById('pdiap2').textContent="по";
+			document.getElementById('p9').textContent="Пошук по сайту:";
+			document.getElementById('p10').textContent="Пошук в соц. мережах:";
+			document.getElementById('p11').textContent="Регіон пошуку:";
+			document.getElementById('p12').textContent="Пошук подібних сайтів:";
+			document.getElementById('p13').textContent="Пошук у Title:";
+			document.getElementById('p14').textContent="Пошук у URL:";
+			document.getElementById('p15').textContent="Пошук слова в тексті:";
+			document.getElementById('p16').textContent="Пошук всіх слів в тексті:";
+			
+			document.getElementById('p17').textContent="Ваш запит";
+			
+			document.getElementById('srchbtn').value="Пошук";
+		}
+		dv1.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.className="lang";
+		div.id="langrus";
+		div.title="Російська";
+		div.onclick = function multi2(){		
+			document.getElementById('pformal').textContent="Формирование запроса";
+			
+			document.getElementById('langua').title="Украинский";
+			document.getElementById('langrus').title="Русский";
+			document.getElementById('langen').title="Английский";
+			document.getElementById('langua').style.backgroundImage="url(1-1-2.png)";
+			document.getElementById('langrus').style.backgroundImage="url(2-2-2.png)";
+			document.getElementById('langen').style.backgroundImage="url(3-1-3.png)";
+			
+			document.getElementById('pi1').title="Введите в поле свой запрос";
+			document.getElementById('pi2').title="Поле для дополнительного запроса";
+			document.getElementById('pi3').title="Введите слово, значение которого нужно найти";
+			document.getElementById('pi4').title="Введите название фильма, который нужно найти";
+			document.getElementById('pi5').title="Введите в поле слова, которые нужно включить в поиск";
+			document.getElementById('pi6').title="Введите в поле слова, которые нужно исключить из поиска";
+			document.getElementById('pi7').title="Заполните поля для поиска стоимости. Цена указана в долларах";
+			document.getElementById('pi8').title="Введите URL сайта для поиска";
+			document.getElementById('pi9').title="Введите URL сайта для поиска подобных сайтов";
+			document.getElementById('pi10').title="Введите слова для поиска в Title";
+			document.getElementById('pi11').title="Введите слово для поиска в URL";
+			document.getElementById('pi12').title="Введите слово для поиска на сайте";
+			document.getElementById('pi13').title="Введите слова для поиска на сайте";
+			
+			document.getElementById('navp1').textContent="Общий поиск";
+			document.getElementById('navp2').textContent="Значение";
+			document.getElementById('navp3').textContent="Фильмы";
+			document.getElementById('navp4').textContent="Веб";
+			document.getElementById('clr').textContent="Очистить все";
+			
+			document.getElementById('navp1').title="Общий поиск";
+			document.getElementById('navp2').title="Поиск значения слова";
+			document.getElementById('navp3').title="Поиск фильмов";
+			document.getElementById('navp4').title="Веб поиск";
+			document.getElementById('clr').title="Нажмите для очищения всех полей";
+			
+			document.getElementById('p1').textContent="Запрос:";
+			document.getElementById('p2').textContent="Альтернативный запрос:";
+			document.getElementById('p3').textContent="Значение слова:";
+			document.getElementById('p4').textContent="Название фільма:";
+			document.getElementById('p5').textContent="Включить слова:";
+			document.getElementById('p6').textContent="Выключить слова:";
+			document.getElementById('p7').textContent="Тип файла:";
+			document.getElementById('p8').textContent="Диапазон цен:";
+			document.getElementById('pdiap1').textContent="от";
+			document.getElementById('pdiap2').textContent="до";
+			document.getElementById('p9').textContent="Поиск по сайту:";
+			document.getElementById('p10').textContent="Поиск в соц. сетях:";
+			document.getElementById('p11').textContent="Регион поиска:";
+			document.getElementById('p12').textContent="Поиск похожих сайтов:";
+			document.getElementById('p13').textContent="Поиск в Title:";
+			document.getElementById('p14').textContent="Поиск в URL:";
+			document.getElementById('p15').textContent="Поиск слова в тексте:";
+			document.getElementById('p16').textContent="Поиск всех слов в тексте:";
+			
+			document.getElementById('p17').textContent="Ваш запрос";
+			
+			document.getElementById('srchbtn').value="Поиск";
+		}
+		dv1.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.className="lang";
+		div.id="langen";
+		div.title="Англійська";
+		div.onclick = function multi3(){
+			document.getElementById('pformal').textContent="Query Formulation";
+			
+			document.getElementById('langua').title="Ukrainian";
+			document.getElementById('langrus').title="Russian";
+			document.getElementById('langen').title="English ";
+			document.getElementById('langua').style.backgroundImage="url(1-1-2.png)";
+			document.getElementById('langrus').style.backgroundImage="url(2-1-2.png)";
+			document.getElementById('langen').style.backgroundImage="url(3-3-3.png)";
+			
+			document.getElementById('pi1').title="Enter your request in the field";
+			document.getElementById('pi2').title="Additional request field";
+			document.getElementById('pi3').title="Enter the word whose value you want to find";
+			document.getElementById('pi4').title="Enter the name of the movie you want to find";
+			document.getElementById('pi5').title="Enter in the field the words to be included in the search";
+			document.getElementById('pi6').title="Enter in the field the words to be excluded from the search";
+			document.getElementById('pi7').title="Fill in the fields to find the cost. Price is in dollars";
+			document.getElementById('pi8').title="Enter site URL to search";
+			document.getElementById('pi9').title="Enter the site URL to search for similar sites";
+			document.getElementById('pi10').title="Enter the words to search in Title";
+			document.getElementById('pi11').title="Enter the search term in the URL";
+			document.getElementById('pi12').title="Enter the word to search on the site";
+			document.getElementById('pi13').title="Enter the words to search on the site";
+			
+			document.getElementById('navp1').textContent="General search";
+			document.getElementById('navp2').textContent="Meaning";
+			document.getElementById('navp3').textContent="Films";
+			document.getElementById('navp4').textContent="Web";
+			document.getElementById('clr').textContent="Clear all";
+			
+			document.getElementById('navp1').title="General search";
+			document.getElementById('navp2').title="Word meaning search";
+			document.getElementById('navp3').title="Movie search";
+			document.getElementById('navp4').title="Web search";
+			document.getElementById('clr').title="Click to clear all fields";
+			
+			document.getElementById('p1').textContent="Request:";
+			document.getElementById('p2').textContent="Alternative request:";
+			document.getElementById('p2').textContent="Meaning of the word:";
+			document.getElementById('p4').textContent="Movie title:";
+			document.getElementById('p5').textContent="Include words:";
+			document.getElementById('p6').textContent="Exclude words:";
+			document.getElementById('p7').textContent="File type:";
+			document.getElementById('p8').textContent="Price range:";
+			document.getElementById('pdiap1').textContent="from";
+			document.getElementById('pdiap2').textContent="to";
+			document.getElementById('p9').textContent="Search the site:";
+			document.getElementById('p10').textContent="Search soc. networking:";
+			document.getElementById('p11').textContent="Region of search:";
+			document.getElementById('p12').textContent="Search for similar sites:";
+			document.getElementById('p13').textContent="Search for Title:";
+			document.getElementById('p14').textContent="Search in URL:";
+			document.getElementById('p15').textContent="Search the word in the text:";
+			document.getElementById('p16').textContent="Search all words in the text:";
+			
+			document.getElementById('p17').textContent="Your request";
+			
+			document.getElementById('srchbtn').value="Search";
+		}
+		dv1.appendChild(div);
+		
+	    //---------------------------------------- Контейнер з головними елементами
+		var form = document.createElement('form');
+		form.id="frm";
+		form.action="Search_2.html";
+		form.target="_self";
+		document.body.appendChild(form);
+		
+		var div = document.createElement('div');
+		div.id="dv2";
+		frm.appendChild(div);
+		
+		
+		
+		var div = document.createElement('div');
+		div.id="logo";
+		dv1.appendChild(div);
+		//---------------------------------------- Навигаційне меню
+		var div = document.createElement('div');
+		div.id="nav";
+		dv2.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Загальний пошук";
+		p.className="navp";
+		p.id="navp1";
+		p.title="Загальний пошук";
+		p.onclick = function zag(){
+			//-----------------------CSS		
+			document.getElementById('navp1').style.backgroundColor="#88CAEA";
+			document.getElementById('navp2').style.backgroundColor="white";
+			document.getElementById('navp3').style.backgroundColor="white";
+			document.getElementById('navp4').style.backgroundColor="white";
+			
+			document.getElementById('dc1').style.display="inline-block";
+			document.getElementById('dcc1').style.display="inline-flex";
+			document.getElementById('dc2').style.display="inline-block";
+			document.getElementById('dcc2').style.display="inline-flex";
+			document.getElementById('dc5').style.display="inline-block";
+			document.getElementById('dcc5').style.display="inline-flex";
+			document.getElementById('dc6').style.display="inline-block";
+			document.getElementById('dcc6').style.display="inline-flex";
+			document.getElementById('dc7').style.display="inline-block";
+			document.getElementById('dcc7').style.display="inline-flex";
+			document.getElementById('dc8').style.display="inline-block";
+			document.getElementById('dcc8').style.display="inline-flex";
+			document.getElementById('dc9').style.display="inline-block";
+			document.getElementById('dcc9').style.display="inline-flex";
+			document.getElementById('dc10').style.display="inline-block";
+			document.getElementById('dcc10').style.display="inline-flex";
+			document.getElementById('dc11').style.display="inline-block";
+			document.getElementById('dcc11').style.display="inline-flex";
+			
+			document.getElementById('dc3').style.display="none";
+			document.getElementById('dcc3').style.display="none";
+			document.getElementById('dc4').style.display="none";
+			document.getElementById('dcc4').style.display="none";
+			document.getElementById('dc12').style.display="none";
+			document.getElementById('dcc12').style.display="none";
+			document.getElementById('dc13').style.display="none";
+			document.getElementById('dcc13').style.display="none";
+			document.getElementById('dc14').style.display="none";
+			document.getElementById('dcc14').style.display="none";
+			document.getElementById('dc15').style.display="none";
+			document.getElementById('dcc15').style.display="none";
+			document.getElementById('dc16').style.display="none";
+			document.getElementById('dcc16').style.display="none";
+			
+		}
+		
+		nav.appendChild(p);
+		
+		var p = document.createElement('p');
+		p.textContent="Значення";
+		p.className="navp";
+		p.id="navp2";
+		p.title="Пошук значення слова";
+		p.onclick = function znach(){
+			//-----------------------CSS
+			document.getElementById('navp1').style.backgroundColor="white";
+			document.getElementById('navp2').style.backgroundColor="#88CAEA";
+			document.getElementById('navp3').style.backgroundColor="white";
+			document.getElementById('navp4').style.backgroundColor="white";
+			
+			document.getElementById('dc3').style.display="inline-block";
+			document.getElementById('dcc3').style.display="inline-flex";
+			document.getElementById('dc5').style.display="inline-block";
+			document.getElementById('dcc5').style.display="inline-flex";
+			document.getElementById('dc6').style.display="inline-block";
+			document.getElementById('dcc6').style.display="inline-flex";
+			
+			
+			document.getElementById('dc1').style.display="none";
+			document.getElementById('dcc1').style.display="none";
+			document.getElementById('dc2').style.display="none";
+			document.getElementById('dcc2').style.display="none";
+			document.getElementById('dc7').style.display="none";
+			document.getElementById('dcc7').style.display="none";
+			document.getElementById('dc8').style.display="none";
+			document.getElementById('dcc8').style.display="none";
+			document.getElementById('dc9').style.display="none";
+			document.getElementById('dcc9').style.display="none";
+			document.getElementById('dc10').style.display="none";
+			document.getElementById('dcc10').style.display="none";
+			document.getElementById('dc11').style.display="none";
+			document.getElementById('dcc11').style.display="none";
+			document.getElementById('dc4').style.display="none";
+			document.getElementById('dcc4').style.display="none";
+			document.getElementById('dc12').style.display="none";
+			document.getElementById('dcc12').style.display="none";
+			document.getElementById('dc13').style.display="none";
+			document.getElementById('dcc13').style.display="none";
+			document.getElementById('dc14').style.display="none";
+			document.getElementById('dcc14').style.display="none";
+			document.getElementById('dc15').style.display="none";
+			document.getElementById('dcc15').style.display="none";
+			document.getElementById('dc16').style.display="none";
+			document.getElementById('dcc16').style.display="none";
+		}
+		nav.appendChild(p);
+		
+		var p = document.createElement('p');
+		p.textContent="Фільми";
+		p.className="navp";
+		p.id="navp3";
+		p.title="Пошук фільмів";
+		p.onclick = function films(){
+			//-----------------------CSS
+			document.getElementById('navp1').style.backgroundColor="white";
+			document.getElementById('navp2').style.backgroundColor="white";
+			document.getElementById('navp3').style.backgroundColor="#88CAEA";
+			document.getElementById('navp4').style.backgroundColor="white";
+			
+			document.getElementById('dc4').style.display="inline-block";
+			document.getElementById('dcc4').style.display="inline-flex";
+			document.getElementById('dc5').style.display="inline-block";
+			document.getElementById('dcc5').style.display="inline-flex";
+			document.getElementById('dc6').style.display="inline-block";
+			document.getElementById('dcc6').style.display="inline-flex";
+			document.getElementById('dc9').style.display="inline-block";
+			document.getElementById('dcc9').style.display="inline-flex";
+			
+			document.getElementById('dc3').style.display="none";
+			document.getElementById('dcc3').style.display="none";
+			document.getElementById('dc1').style.display="none";
+			document.getElementById('dcc1').style.display="none";
+			document.getElementById('dc2').style.display="none";
+			document.getElementById('dcc2').style.display="none";
+			document.getElementById('dc7').style.display="none";
+			document.getElementById('dcc7').style.display="none";
+			document.getElementById('dc8').style.display="none";
+			document.getElementById('dcc8').style.display="none";
+			document.getElementById('dc10').style.display="none";
+			document.getElementById('dcc10').style.display="none";
+			document.getElementById('dc11').style.display="none";
+			document.getElementById('dcc11').style.display="none";
+			document.getElementById('dc12').style.display="none";
+			document.getElementById('dcc12').style.display="none";
+			document.getElementById('dc13').style.display="none";
+			document.getElementById('dcc13').style.display="none";
+			document.getElementById('dc14').style.display="none";
+			document.getElementById('dcc14').style.display="none";
+			document.getElementById('dc15').style.display="none";
+			document.getElementById('dcc15').style.display="none";
+			document.getElementById('dc16').style.display="none";
+			document.getElementById('dcc16').style.display="none";
+		}
+		nav.appendChild(p);
+		
+		var p = document.createElement('p');
+		p.textContent="Веб";
+		p.className="navp";
+		p.id="navp4";
+		p.title="Веб пошук";
+		p.onclick = function web(){
+			//-----------------------CSS
+			document.getElementById('navp1').style.backgroundColor="white";
+			document.getElementById('navp2').style.backgroundColor="white";
+			document.getElementById('navp3').style.backgroundColor="white";
+			document.getElementById('navp4').style.backgroundColor="#88CAEA";
+			
+			document.getElementById('dc12').style.display="inline-block";
+			document.getElementById('dcc12').style.display="inline-flex";
+			document.getElementById('dc13').style.display="inline-block";
+			document.getElementById('dcc13').style.display="inline-flex";
+			document.getElementById('dc14').style.display="inline-block";
+			document.getElementById('dcc14').style.display="inline-flex";
+			document.getElementById('dc15').style.display="inline-block";
+			document.getElementById('dcc15').style.display="inline-flex";
+			document.getElementById('dc16').style.display="inline-block";
+			document.getElementById('dcc16').style.display="inline-flex";
+			
+			document.getElementById('dc4').style.display="none";
+			document.getElementById('dcc4').style.display="none";
+			document.getElementById('dc5').style.display="none";
+			document.getElementById('dcc5').style.display="none";
+			document.getElementById('dc6').style.display="none";
+			document.getElementById('dcc6').style.display="none";
+			document.getElementById('dc9').style.display="none";
+			document.getElementById('dcc9').style.display="none";
+			document.getElementById('dc3').style.display="none";
+			document.getElementById('dcc3').style.display="none";
+			document.getElementById('dc1').style.display="none";
+			document.getElementById('dcc1').style.display="none";
+			document.getElementById('dc2').style.display="none";
+			document.getElementById('dcc2').style.display="none";
+			document.getElementById('dc7').style.display="none";
+			document.getElementById('dcc7').style.display="none";
+			document.getElementById('dc8').style.display="none";
+			document.getElementById('dcc8').style.display="none";
+			document.getElementById('dc10').style.display="none";
+			document.getElementById('dcc10').style.display="none";
+			document.getElementById('dc11').style.display="none";
+			document.getElementById('dcc11').style.display="none";
+		}
+		nav.appendChild(p);
+		
+		
+		
+		var p = document.createElement('p');
+		p.textContent="Формулювання запиту";
+		p.id = "pformal";
+		dv2.appendChild(p);
+		
+		var p = document.createElement('p');
+	    p.id = "clr";
+		p.textContent="Очистити все";
+		p.title="Натисніть для очищення всіх полів";
+		p.onclick= function clrr(){
+			document.getElementById('i1').value="";
+			document.getElementById('i2').value="";
+			document.getElementById('i3').value="";
+			document.getElementById('i4').value="";
+			document.getElementById('i5').value="";
+			document.getElementById('i6').value="";
+			document.getElementById('diapvid').value="";
+			document.getElementById('diappo').value="";
+			document.getElementById('i9').value="";
+			document.getElementById('i12').value="";
+			document.getElementById('i13').value="";
+			document.getElementById('i14').value="";
+			document.getElementById('i15').value="";
+			document.getElementById('i16').value="";
+			
+			document.getElementById('cht1').checked=false;
+			document.getElementById('cht2').checked=false;
+			document.getElementById('cht3').checked=false;
+			document.getElementById('cht4').checked=false;
+			document.getElementById('cht5').checked=false;
+			document.getElementById('cht6').checked=false;
+			document.getElementById('cht7').checked=false;
+			document.getElementById('cht8').checked=false;
+			document.getElementById('cht9').checked=false;
+			document.getElementById('cht10').checked=false;
+			
+			document.getElementById('chm1').checked=false;
+			document.getElementById('chm2').checked=false;
+			document.getElementById('chm3').checked=false;
+			
+			document.getElementById('chreg1').checked=false;
+			document.getElementById('chreg2').checked=false;
+			document.getElementById('chreg3').checked=false;
+			document.getElementById('chreg4').checked=false;
+			document.getElementById('chreg5').checked=false;
+			document.getElementById('chreg6').checked=false;
+			
+			document.getElementById('vyvid').value="";
+			function deleteCookie(name) {
+            setCookie(name, "", {
+            expires: -1
+            })
+            }
+		}
+	    dv2.appendChild(p);
+		//----------------------------------------Контейнер для полів
+		var div = document.createElement('div');
+		div.className = "bigcont";
+		div.id="bgc";
+		dv2.appendChild(div);
+		
+		//----------------------------------------Запит
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc1";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Запит:";
+		p.id="p1";
+		p.className="col1txt";
+		dc1.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc1";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i1";
+		var t1="";
+		input.oninput = function inp1(){
+			t1=document.getElementById('i1').value;	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+			
+		}
+		dcc1.appendChild(input);		
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi1";
+		p.title="Введіть у поле свій запит";
+		dcc1.appendChild(p);
+		//----------------------------------------Альтернативний запит
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc2";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Альтернативний запит:";
+		p.id="p2";
+		p.className="col1txt";
+		dc2.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc2";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i2";
+		var t2="";
+		input.oninput = function inp2(){
+			t2=" "+document.getElementById('i2').value;	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		dcc2.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi2";
+		p.title="Поле для додаткового запиту";
+		dcc2.appendChild(p);
+		//----------------------------------------Значення слова
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc3";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Значення слова:";
+		p.id="p3";
+		p.className="col1txt";
+		dc3.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc3";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i3";
+		var t3="";
+		input.oninput = function inp3(){
+			t3=" "+document.getElementById('i3').value;
+			document.getElementById('vyvid').value=t3+t5+t6;
+		}
+		dcc3.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi3";
+		p.title="Введіть слово, значення якого потрібно знайти";
+		dcc3.appendChild(p);
+		//----------------------------------------Назва фільму
+	    var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc4";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Назва фільму:";
+		p.id="p4";
+		p.className="col1txt";
+		dc4.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc4";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i4";
+		var t4="";
+		input.oninput = function inp4(){
+			t4=" "+document.getElementById('i4').value;
+			document.getElementById('vyvid').value=t4+t5+t6+t9;
+		}
+		dcc4.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi4";
+		p.title="Введіть назву фільму, який потрібно знайти";
+		dcc4.appendChild(p);
+		//----------------------------------------Включити слова
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc5";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Включити слова:";
+		p.id="p5";
+		p.className="col1txt";
+		dc5.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc5";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i5";
+		var t5="";
+		input.oninput = function inp5(){
+			t5=" "+document.getElementById('i5').value;	document.getElementById('vyvid').value=t1+t2+t3+t4+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		dcc5.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi5";
+		p.title="Введіть у поле слова, які потрібно включити у пошук";
+		dcc5.appendChild(p);
+		//----------------------------------------Виключити слова
+		 var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc6";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Виключити слова:";
+		p.id="p6";
+		p.className="col1txt";
+		dc6.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc6";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i6";
+		var t6="";
+		input.oninput = function inp6(){
+			t6=" "+document.getElementById('i6').value;	document.getElementById('vyvid').value=t1+t2+t3+t4+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		dcc6.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi6";
+		p.title="Введіть у поле слова, які потрібно виключити з пошуку";
+		dcc6.appendChild(p);
+		//----------------------------------------Тип файлу
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc7";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Тип файлу:";
+		p.id="p7";
+		p.className="col1txt";
+		dc7.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc7";
+		bgc.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.className="contdivtype";
+		div.id="contdtype";
+		dcc7.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype1";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht1";
+		input.className="checktype";
+		label.textContent="pdf";
+		label.id="pdf";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype1.appendChild(label);
+		
+		var chft1="";
+		input.oninput=function checkfiletype1(){
+			if(document.getElementById('cht1').checked==true){
+				chft1=" "+document.getElementById('pdf').textContent;
+			}
+			else{
+				chft1=" ";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype2";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht2";
+		input.className="checktype";
+		label.textContent="txt";
+		label.id="txt";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype2.appendChild(label);
+		
+		var chft2="";
+		input.oninput=function checkfiletype2(){
+			if(document.getElementById('cht2').checked==true){
+				chft2=" "+document.getElementById('txt').textContent;
+			}
+			else{
+				chft2=" ";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype3";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht3";
+		input.className="checktype";
+		label.textContent="rtf";
+		label.id="rtf";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype3.appendChild(label);
+		
+		var chft3="";
+		input.oninput=function checkfiletype3(){
+			if(document.getElementById('cht3').checked==true){
+				chft3=" "+document.getElementById('rtf').textContent;
+			}
+			else{
+				chft3=" ";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype4";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht4";
+		input.className="checktype";
+		label.textContent="doc";
+		label.id="doc";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype4.appendChild(label);
+		
+		var chft4="";
+		input.oninput=function checkfiletype4(){
+			if(document.getElementById('cht4').checked==true){
+				chft4=" "+document.getElementById('doc').textContent;
+			}
+			else{
+				chft4=" ";
+			}
+			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype5";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht5";
+		input.className="checktype";
+		label.textContent="html";
+		label.id="html";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype5.appendChild(label);
+		
+		var chft5="";
+		input.oninput=function checkfiletype5(){
+			if(document.getElementById('cht5').checked==true){
+				chft5=" "+document.getElementById('html').textContent;
+			}
+			else{
+				chft5=" ";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype6";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht6";
+		input.className="checktype";
+		label.textContent="djvu";
+		label.id="djvu";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype6.appendChild(label);
+		
+		var chft6="";
+		input.oninput=function checkfiletype6(){
+			if(document.getElementById('cht6').checked==true){
+				chft6=" "+document.getElementById('djvu').textContent;
+			}
+			else{
+				chft6=" ";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype7";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht7";
+		input.className="checktype";
+		label.textContent="fb2";
+		label.id="fb2";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype7.appendChild(label);
+		
+		var chft7="";
+		input.oninput=function checkfiletype7(){
+			if(document.getElementById('cht7').checked==true){
+				chft7=" "+document.getElementById('fb2').textContent;
+			}
+			else{
+				chft7=" ";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype8";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht8";
+		input.className="checktype";
+		label.textContent="rar";
+		label.id="rar";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype8.appendChild(label);
+		
+		var chft8="";
+		input.oninput=function checkfiletype8(){
+			if(document.getElementById('cht8').checked==true){
+				chft8=" "+document.getElementById('rar').textContent;
+			}
+			else{
+				chft8=" ";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype9";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht9";
+		input.className="checktype";
+		label.textContent="xls";
+		label.id="xls";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype9.appendChild(label);
+		
+		var chft9="";
+		input.oninput=function checkfiletype9(){
+			if(document.getElementById('cht9').checked==true){
+				chft9=" "+document.getElementById('xls').textContent;
+			}
+			else{
+				chft9=" ";
+			}		document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.className="divtype";
+		div.id="dtype10";
+		contdtype.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="cht10";
+		input.className="checktype";
+		label.textContent="ppt";
+		label.id="ppt";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		dtype10.appendChild(label);
+		
+		var chft10="";
+		input.oninput=function checkfiletype10(){
+			if(document.getElementById('cht10').checked==true){
+				chft10=" "+document.getElementById('ppt').textContent;
+			}
+			else{
+				chft10=" ";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		//----------------------------------------Діапазон цін
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc8";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Діапазон цін:";
+		p.id="p8";
+		p.className="col1txt";
+		dc8.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc8";
+		bgc.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.id="contdiap";
+		dcc8.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="від";
+		p.id="pdiap1";
+		contdiap.appendChild(p);
+		
+		var input = document.createElement('input');
+		input.type="text";
+		input.value = "";
+		input.id="diapvid";
+		input.className="diapinp";
+		var dt1="";
+		var dt2="";
+		var dtdop1="";
+		var dtdop2="";
+		input.oninput = function inp81(){
+			dtdop1 = document.getElementById("diapvid").value.replace(/[^0-9]/g,"");
+			document.getElementById("diapvid").value=dtdop1;
+			if(document.getElementById("diapvid").value!=""&&document.getElementById("diappo").value!=""){
+				dt1=" "+"$"+dtdop1+"..";
+				dt2=dtdop2;
+			}
+			else{
+				dt1="";
+				dt2="";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		contdiap.appendChild(input);
+		
+		var p = document.createElement('p');
+		p.textContent="по";
+		p.id="pdiap2";
+		contdiap.appendChild(p);
+		
+		var input = document.createElement('input');
+		input.type="text";
+		input.value = "";
+		input.id="diappo";
+		input.className="diapinp";
+		input.oninput = function inp82(){
+			dtdop2 = document.getElementById("diappo").value.replace(/[^0-9]/g,"");
+			document.getElementById("diappo").value=dtdop2;
+			if(document.getElementById("diapvid").value!=""&&document.getElementById("diappo").value!=""){
+				dt1=" "+"$"+dtdop1+"..";
+				dt2=dtdop2;
+			}
+			else{
+				dt1="";
+				dt2="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		contdiap.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi7";
+		p.title="Заповніть поля для пошуку вартості. Ціна вказана у доларах";
+		dcc8.appendChild(p);
+		//----------------------------------------Пошук по сайту
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc9";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук по сайту:";
+		p.id="p9";
+		p.className="col1txt";
+		dc9.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc9";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i9";
+		var t9="";
+		input.oninput = function inp9(){
+			t9=" "+document.getElementById('i9').value;	document.getElementById('vyvid').value=t1+t2+t4+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		dcc9.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi8";
+		p.title="Введіть URL сайту для пошуку";
+		dcc9.appendChild(p);
+		//----------------------------------------Пошук в соц. мережах
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc10";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук в соц. мережах:";
+		p.id="p10";
+		p.className="col1txt";
+		dc10.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc10";
+		bgc.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.id ="contmerezhi1";
+		dcc10.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chm1";
+		input.className="checktype";
+		label.textContent="facebook";
+		label.id="face";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contmerezhi1.appendChild(label);
+		
+		var chmrzh1="";
+		input.oninput= function inp101(){
+			if(document.getElementById('chm1').checked==true){
+				chmrzh1=" "+document.getElementById("face").textContent;
+			}
+			else{
+				chmrzh1="";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contmerezhi2";
+		dcc10.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chm2";
+		input.className="checktype";
+		label.textContent="instagram";
+		label.id="insta";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contmerezhi2.appendChild(label);
+		
+		var chmrzh2="";
+		input.oninput= function inp102(){
+			if(document.getElementById('chm2').checked==true){
+				chmrzh2=" "+document.getElementById("insta").textContent;
+			}
+			else{
+				chmrzh2="";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contmerezhi3";
+		dcc10.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chm3";
+		input.className="checktype";
+		label.textContent="twitter";
+		label.id="twit";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contmerezhi3.appendChild(label);
+		
+		var chmrzh3="";
+		input.oninput= function inp103(){
+			if(document.getElementById('chm3').checked==true){
+				chmrzh3=" "+document.getElementById("twit").textContent;
+			}
+			else{
+				chmrzh3="";
+			}	document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		//----------------------------------------Регіон пошуку
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc11";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Регіон пошуку:";
+		p.id="p11";
+		p.className="col1txt";
+		dc11.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc11";
+		bgc.appendChild(div);
+		
+		var div = document.createElement('div');
+		div.id ="contreg1";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg1";
+		input.className="checktype";
+		label.textContent="ua";
+		label.id="ua";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg1.appendChild(label);
+		
+		var chrg1="";
+		input.oninput= function inp111(){
+			if(document.getElementById('chreg1').checked==true){
+				chrg1=" "+document.getElementById("ua").textContent;
+			}
+			else{
+				chrg1="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contreg2";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg2";
+		input.className="checktype";
+		label.textContent="us";
+		label.id="us";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg2.appendChild(label);
+		
+		var chrg2="";
+		input.oninput= function inp112(){
+			if(document.getElementById('chreg2').checked==true){
+				chrg2=" "+document.getElementById("us").textContent;
+			}
+			else{
+				chrg2="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contreg3";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg3";
+		input.className="checktype";
+		label.textContent="cn";
+		label.id="cn";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg3.appendChild(label);
+		
+		var chrg3="";
+		input.oninput= function inp113(){
+			if(document.getElementById('chreg3').checked==true){
+				chrg3=" "+document.getElementById("cn").textContent;
+			}
+			else{
+				chrg3="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contreg4";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg4";
+		input.className="checktype";
+		label.textContent="fr";
+		label.id="fr";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg4.appendChild(label);
+		
+		var chrg4="";
+		input.oninput= function inp114(){
+			if(document.getElementById('chreg4').checked==true){
+				chrg4=" "+document.getElementById("fr").textContent;
+			}
+			else{
+				chrg4="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contreg5";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg5";
+		input.className="checktype";
+		label.textContent="jp";
+		label.id="jp";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg5.appendChild(label);
+		
+		var chrg5="";
+		input.oninput= function inp115(){
+			if(document.getElementById('chreg5').checked==true){
+				chrg5=" "+document.getElementById("jp").textContent;
+			}
+			else{
+				chrg5="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		
+		var div = document.createElement('div');
+		div.id ="contreg6";
+		div.className="regions";
+		dcc11.appendChild(div);
+		
+		var input = document.createElement('input');
+		var label = document.createElement('label');
+		input.type = "checkbox";
+		input.id="chreg6";
+		input.className="checktype";
+		label.textContent="pl";
+		label.id="pl";
+		label.className="labeltype";
+		label.insertBefore(input, label.firstChild);
+		contreg6.appendChild(label);
+		
+		var chrg6="";
+		input.oninput= function inp116(){
+			if(document.getElementById('chreg6').checked==true){
+				chrg6=" "+document.getElementById("pl").textContent;
+			}
+			else{
+				chrg6="";
+			}			document.getElementById('vyvid').value=t1+t2+t5+t6+chft1+chft2+chft3+chft4+chft5+chft6+chft7+chft8+chft9+chft10+dt1+dt2+t9+chmrzh1+chmrzh2+chmrzh3+chrg1+chrg2+chrg3+chrg4+chrg5+chrg6;
+		}
+		//----------------------------------------Пошук подібних сайтів
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc12";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук подібних сайтів:";
+		p.id="p12";
+		p.className="col1txt";
+		dc12.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc12";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i12";
+		var t12="";
+		input.oninput = function inp12(){
+			t12=" "+document.getElementById('i12').value;
+			document.getElementById('vyvid').value=t12+t13+t14+t15+t16;
+		}
+		dcc12.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi9";
+		p.title="Введіть URL сайту для пошуку подібних сайтів";
+		dcc12.appendChild(p);
+		//----------------------------------------Пошук у Title
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc13";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук у Title:";
+		p.id="p13";
+		p.className="col1txt";
+		dc13.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc13";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i13";
+		var t13="";
+		input.oninput = function inp13(){
+			t13=" "+document.getElementById('i13').value;
+			document.getElementById('vyvid').value=t12+t13+t14+t15+t16;
+		}
+		dcc13.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi10";
+		p.title="Введіть слова для пошуку у Title";
+		dcc13.appendChild(p);
+		//----------------------------------------Пошук у URL
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc14";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук у URL:";
+		p.id="p14";
+		p.className="col1txt";
+		dc14.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc14";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i14";
+		var t14="";
+		input.oninput = function inp14(){
+			t14=" "+document.getElementById('i14').value;
+			document.getElementById('vyvid').value=t12+t13+t14+t15+t16;
+		}
+		dcc14.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi11";
+		p.title="Введіть слово для пошуку у URL";
+		dcc14.appendChild(p);
+		//----------------------------------------Пошук слова в тексті
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc15";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук слова в тексті:";
+		p.id="p15";
+		p.className="col1txt";
+		dc15.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc15";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i15";
+		var t15="";
+		input.oninput = function inp15(){
+			t15=" "+document.getElementById('i15').value;
+			document.getElementById('vyvid').value=t12+t13+t14+t15+t16;
+		}
+		dcc15.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi12";
+		p.title="Введіть слово для пошуку на сайті";
+		dcc15.appendChild(p);
+			//----------------------------------------Пошук всіх слів в тексті
+		var div = document.createElement('div');
+		div.className = "divcol1";
+		div.id="dc16";
+		bgc.appendChild(div);
+		
+		var p = document.createElement('p');
+		p.textContent="Пошук всіх слів в тексті:";
+		p.id="p16";
+		p.className="col1txt";
+		dc16.appendChild(p);
+		
+		var div = document.createElement('div');
+		div.className = "divcol2";
+		div.id="dcc16";
+		bgc.appendChild(div);
+		
+		var input = document.createElement('input');
+		input.className ="inpcl";
+		input.value = "";
+		input.id="i16";
+		var t16="";
+		input.oninput = function inp16(){
+			t16=" "+document.getElementById('i16').value;
+		    document.getElementById('vyvid').value=t12+t13+t14+t15+t16;
+		}
+		dcc16.appendChild(input);
+		
+		var p=document.createElement('p');
+		p.textContent="i";
+		p.className="pinfo";
+		p.id="pi13";
+		p.title="Введіть слова для пошуку на сайті";
+		dcc16.appendChild(p);
+		//----------------------------------------Результати
+		var div = document.createElement('div');
+		div.className = "results";
+		div.id="dv3";
+		frm.appendChild(div);
+		
+		
+		var p = document.createElement('p');
+		p.textContent="Ваш запит:";
+		p.id="p17";
+		dv3.appendChild(p);
+		
+		var input = document.createElement('input');
+		input.id="vyvid";
+		input.readOnly=true;
+		input.style.outline="none";
+		dv3.appendChild(input);
+		
+		var input = document.createElement('input');
+		input.id="forsearch";
+		input.name="q";
+		input.value="";
+		dv3.appendChild(input);
+		
+		var input = document.createElement('input');
+		input.type="submit";
+		input.name="sa";
+		input.value="Пошук";
+		input.id="srchbtn";
+		dv3.appendChild(input);
+		document.getElementById("srchbtn").onclick=function rqst(){
+			//=====================================Створення змінних для формування запиту
+			var z1 = document.getElementById("i1").value;//---запит
+			var z2 = document.getElementById("i2").value;//---альтернативний
+			var z3 = document.getElementById("i3").value;//---значення слова
+			var z4 = document.getElementById("i4").value;//---фільми
+			var z5 = document.getElementById("i5").value;//---включити слова
+			var z6 = document.getElementById("i6").value;//---виключити слова
+			var zchft1 = "";//---pdf
+			var zchft2 = "";//---txt
+			var zchft3 = "";//---rtf
+			var zchft4 = "";//---doc
+			var zchft5 = "";//---html
+			var zchft6 = "";//---djvu
+			var zchft7 = "";//---fb2
+			var zchft8 = "";//---rar
+			var zchft9 = "";//---xls
+			var zchft10 = "";//---ppt
+			var zdiapvid="";//---ціна від
+			var zdiappo="";//---ціна по
+			var z9 = document.getElementById("i9").value;//---пошук по сайту
+			var zmrzh1="";//---facebook
+			var zmrzh2="";//---instagram
+			var zmrzh3="";//---twitter
+			var zrg1="";//---ua
+			var zrg2="";//---us
+			var zrg3="";//---cn
+			var zrg4="";//---fr
+			var zrg5="";//---jp
+			var zrg6="";//---pl
+			var z12 = document.getElementById("i12").value;//---пошук подібних сайтів
+			var z13 = document.getElementById("i13").value;//---пошук у Title
+			var z14 = document.getElementById("i14").value;//---пошук у URL
+			var z15 = document.getElementById("i15").value;//---пошук слова в тексті
+			var z16 = document.getElementById("i16").value;//---пошук всіх слів в тексті
+			//============================================Перевірка змінних на порожні поля
+			//--------------------------------------------Запит
+			switch (document.getElementById("i1").value){
+				case '':
+					z1="";
+					break;
+				default:
+					z1=z1;
+			}
+			//--------------------------------------------Альтернативний
+			switch (document.getElementById("i2").value){
+				case '':
+					z2="";
+					break;
+				default:
+					z2=" "+"OR"+" "+z2;
+			}
+			//--------------------------------------------Значення слова
+			switch (document.getElementById("i3").value){
+				case '':
+					z3="";
+					break;
+				default:
+					z3=" "+"define:"+z3;	
+			}
+			//--------------------------------------------Фільми
+			switch (document.getElementById("i4").value){
+				case '':
+					z4="";
+					break;
+				default:
+					z4=" "+"movie:"+z4;	
+			}
+			//--------------------------------------------Включити слова
+			switch (document.getElementById("i5").value){
+				case '':
+					z5="";
+					break;
+				default:
+					z5=" "+'"'+z5+'"';
+			}
+			//--------------------------------------------Виключити слова
+			switch (document.getElementById("i6").value){
+				case '':
+					z6="";
+					break;
+				default:
+					z6=" "+'-'+z6;
+			}
+			//------------------------------=================Тип файлу
+			if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht1").checked==true){
+					zchft1 = " "+"filetype:"+document.getElementById("pdf").textContent;
+			}
+			else{
+				zchft1 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht2").checked==true){
+					zchft2 = " "+"filetype:"+document.getElementById("txt").textContent;
+			}
+			else{
+				zchft2 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht3").checked==true){
+					zchft3 = " "+"filetype:"+document.getElementById("rtf").textContent;
+			}
+			else{
+				zchft3 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht4").checked==true){
+					zchft4 = " "+"filetype:"+document.getElementById("doc").textContent;
+			}
+			else{
+				zchft4 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht5").checked==true){
+					zchft5 = " "+"filetype:"+document.getElementById("html").textContent;
+			}
+			else{
+				zchft5 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht6").checked==true){
+					zchft6 = " "+"filetype:"+document.getElementById("djvu").textContent;
+			}
+			else{
+				zchft6 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht7").checked==true){
+					zchft7 = " "+"filetype:"+document.getElementById("fb2").textContent;
+			}
+			else{
+				zchft7 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht8").checked==true){
+					zchft8 = " "+"filetype:"+document.getElementById("rar").textContent;
+			}
+			else{
+				zchft8 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht9").checked==true){
+					zchft9 = " "+"filetype:"+document.getElementById("xls").textContent;
+			}
+			else{
+				zchft9 ="";
+			}	if(document.getElementById("dcc7").style.display!="none"&&document.getElementById("cht10").checked==true){
+					zchft10 = " "+"filetype:"+document.getElementById("ppt").textContent;
+			}
+			else{
+				zchft10 ="";
+			}
+			//--------------------------------------------Діапазон цін
+			if(document.getElementById("diapvid").value!=""&&document.getElementById("diappo").value!=""){
+				zdiapvid=" "+"$"+zdiapvid+"..";
+			}
+			else{
+				zdiapvid="";
+				zdiappo="";
+			}
+			//--------------------------------------------Пошук по сайту
+			switch (document.getElementById("i9").value){
+				case '':
+					z9="";
+					break;
+				default:
+					z9=" "+"site:"+z9;
+			}
+			//--------------------------------------------Пошук по соц. мережах
+			if(document.getElementById("dcc10").style.display!="none"&&document.getElementById("chm1").checked==true){
+					zmrzh1 = " "+"@"+document.getElementById("face").textContent;
+			}
+			else{
+				zmrzh1 ="";
+			}	if(document.getElementById("dcc10").style.display!="none"&&document.getElementById("chm2").checked==true){
+					zmrzh2 = " "+"@"+document.getElementById("insta").textContent;
+			}
+			else{
+				zmrzh2 ="";
+			}
+			if(document.getElementById("dcc10").style.display!="none"&&document.getElementById("chm3").checked==true){
+					zmrzh3 = " "+"@"+document.getElementById("twit").textContent;
+			}
+			else{
+				zmrzh3 ="";
+			}
+			//--------------------------------------------Пошук по регіону
+			if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg1").checked==true){
+					zrg1 = " "+":"+document.getElementById("ua").textContent;
+			}
+			else{
+				zrg1 ="";
+			}	if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg2").checked==true){
+					zrg2 = " "+":"+document.getElementById("us").textContent;
+			}
+			else{
+				zrg2 ="";
+			}	if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg3").checked==true){
+				zrg3 = " "+":"+document.getElementById("cn").textContent;
+			}
+			else{
+				zrg3 ="";
+			}	if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg4").checked==true){
+				zrg4 = " "+":"+document.getElementById("fr").textContent;
+			}
+			else{
+				zrg4 ="";
+			}	if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg5").checked==true){
+				zrg5 = " "+":"+document.getElementById("jp").textContent;
+			}
+			else{
+				zrg5 ="";
+			}	if(document.getElementById("dcc11").style.display!="none"&&document.getElementById("chreg6").checked==true){
+				zrg6 = " "+":"+document.getElementById("pl").textContent;
+			}
+			else{
+				zrg6 ="";
+			}
+			//--------------------------------------------Пошук подібних сайтів
+			switch (document.getElementById("i12").value){
+				case '':
+					z12="";
+					break;
+				default:
+					z12=" "+"related:"+z12;
+			}
+			//--------------------------------------------Пошук у Title
+			switch (document.getElementById("i13").value){
+				case '':
+					z13="";
+					break;
+				default:
+					z13=" "+"intitle:"+z13;
+			}
+			//--------------------------------------------Пошук у URL
+			switch (document.getElementById("i14").value){
+				case '':
+					z14="";
+					break;
+				default:
+					z14=" "+"inurl:"+z14;
+			}
+			//--------------------------------------------Пошук слова в тексті
+			switch (document.getElementById("i15").value){
+				case '':
+					z15="";
+					break;
+				default:
+					z15=" "+"intext:"+z15;
+			}
+			//--------------------------------------------Пошук всіх слів в тексті
+			switch (document.getElementById("i16").value){
+				case '':
+					z16="";
+					break;
+				default:
+					z16=" "+"allintext:"+z16;
+			}
+			//============================================Якщо поля порожні, без запиту...
+			  if(z1==""&&z2==""&&z3==""&&z4==""&&z5==""&&z6==""&&zdiapvid==""&&zdiappo==""&&z9==""&&z12==""&&z13==""&&z14==""&&z15==""&&z16==""){
+				window.event.preventDefault();//------------метод відмінить дію за замовчуванням(форма не буде відправлена)
+				   
+				  document.getElementById("i1").style.transition="1s";
+				  document.getElementById("i1").style.borderColor="red";
+				  document.getElementById("i2").style.transition="1s";
+				  document.getElementById("i2").style.borderColor="red";
+				  document.getElementById("i3").style.transition="1s";
+				  document.getElementById("i3").style.borderColor="red";
+				  document.getElementById("i4").style.transition="1s";
+				  document.getElementById("i4").style.borderColor="red";
+				  document.getElementById("i5").style.transition="1s";
+				  document.getElementById("i5").style.borderColor="red";
+				  document.getElementById("i6").style.transition="1s";
+				  document.getElementById("i6").style.borderColor="red";
+				  document.getElementById("diapvid").style.transition="1s";
+				  document.getElementById("diapvid").style.borderColor="red";
+				  document.getElementById("diappo").style.transition="1s";
+				  document.getElementById("diappo").style.borderColor="red";
+				  document.getElementById("i9").style.transition="1s";
+				  document.getElementById("i9").style.borderColor="red";
+				  document.getElementById("i12").style.transition="1s";
+				  document.getElementById("i12").style.borderColor="red";
+				  document.getElementById("i13").style.transition="1s";
+				  document.getElementById("i13").style.borderColor="red";
+				  document.getElementById("i14").style.transition="1s";
+				  document.getElementById("i14").style.borderColor="red";
+				  document.getElementById("i15").style.transition="1s";
+				  document.getElementById("i15").style.borderColor="red";
+				  document.getElementById("i16").style.transition="1s";
+				  document.getElementById("i16").style.borderColor="red";
+				  
+				  document.getElementById('i1').onclick=function fcs(){
+					   document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i2').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i3').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i4').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i5').onclick=function fcs(){
+					   document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i6').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('diapvid').onclick=function fcs(){
+					   document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('diappo').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i9').onclick=function fcs(){
+					   document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i12').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i13').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i14').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i15').onclick=function fcs(){
+					    document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+				  document.getElementById('i16').onclick=function fcs(){
+					   document.getElementById('i1').style.borderColor="#888888";
+					   document.getElementById('i2').style.borderColor="#888888";
+					   document.getElementById('i3').style.borderColor="#888888";
+					   document.getElementById('i4').style.borderColor="#888888";
+					   document.getElementById('i5').style.borderColor="#888888";
+					   document.getElementById('i6').style.borderColor="#888888";
+					   document.getElementById('diapvid').style.borderColor="#888888";
+					   document.getElementById('diappo').style.borderColor="#888888";
+					   document.getElementById('i9').style.borderColor="#888888";
+					   document.getElementById('i12').style.borderColor="#888888";
+					   document.getElementById('i13').style.borderColor="#888888";
+					   document.getElementById('i14').style.borderColor="#888888";
+					   document.getElementById('i15').style.borderColor="#888888";
+					   document.getElementById('i16').style.borderColor="#888888";
+				  }
+			} 
+			else{	document.getElementById("forsearch").value=z1+z3+z4+z5+z6+zchft1+zchft2+zchft3+zchft4+zchft5+zchft6+zchft7+zchft8+zchft9+zchft10+z9+zmrzh1+zmrzh2+zmrzh3+zrg1+zrg2+zrg3+zrg4+zrg5+zrg6+z12+z13+z14+z15+z16+z2;//---або запит перейде до прихованого input, звідки форма подає запит до пошукової системи
+				 }
+			
+			//============================================Зберігання данних у localStorage
+			
+		    document.cookie="c1="+document.getElementById("i1").value+";";
+		    document.cookie="c2="+document.getElementById("i2").value+";";
+			document.cookie="c3="+document.getElementById("i3").value+";";
+			document.cookie="c4="+document.getElementById("i4").value+";";
+			document.cookie="c5="+document.getElementById("i5").value+";";
+			document.cookie="c6="+document.getElementById("i6").value+";";
+			document.cookie="c7="+document.getElementById("diapvid").value+";";
+			document.cookie="c8="+document.getElementById("diappo").value+";";
+			document.cookie="c9="+document.getElementById("i9").value+";";
+			document.cookie="c12="+document.getElementById("i12").value+";";
+			document.cookie="c13="+document.getElementById("i13").value+";";
+			document.cookie="c14="+document.getElementById("i14").value+";";
+			document.cookie="c15="+document.getElementById("i15").value+";";
+			document.cookie="c16="+document.getElementById("i16").value+";";
+			//-----------------------Перевірка чекбоксів
+			//-----------------------pdf
+			if(document.getElementById("cht1").checked==true){
+				document.cookie="ch1="+"1"+";";
+			}
+			else{
+				document.cookie="ch1="+"0"+";";
+			}
+			//-----------------------txt
+			if(document.getElementById("cht2").checked==true){
+				document.cookie="ch2="+"1"+";";
+			}
+			else{
+				document.cookie="ch2="+"0"+";";
+			}
+			//-----------------------rtf
+			if(document.getElementById("cht3").checked==true){
+				document.cookie="ch3="+"1"+";";
+			}
+			else{
+				document.cookie="ch3="+"0"+";";
+			}
+			//-----------------------doc
+			if(document.getElementById("cht4").checked==true){
+				document.cookie="ch4="+"1"+";";
+			}
+			else{
+				document.cookie="ch4="+"0"+";";
+			}
+			//-----------------------html
+			if(document.getElementById("cht5").checked==true){
+				document.cookie="ch5="+"1"+";";
+			}
+			else{
+				document.cookie="ch5="+"0"+";";
+			}
+			//-----------------------djvu
+			if(document.getElementById("cht6").checked==true){
+				document.cookie="ch6="+"1"+";";
+			}
+			else{
+				document.cookie="ch6="+"0"+";";
+			}
+			//-----------------------fb2
+			if(document.getElementById("cht7").checked==true){
+				document.cookie="ch7="+"1"+";";
+			}
+			else{
+				document.cookie="ch7="+"0"+";";
+			}
+			//-----------------------rar
+			if(document.getElementById("cht8").checked==true){
+				document.cookie="ch8="+"1"+";";
+			}
+			else{
+				document.cookie="ch8="+"0"+";";
+			}
+			//-----------------------xls
+			if(document.getElementById("cht9").checked==true){
+				document.cookie="ch9="+"1"+";";
+			}
+			else{
+				document.cookie="ch9="+"0"+";";
+			}
+			//-----------------------ppt
+			if(document.getElementById("cht10").checked==true){
+				document.cookie="ch10="+"1"+";";
+			}
+			else{
+				document.cookie="ch10="+"0"+";";
+			}
+			//---------------------------------merezhi
+			//-----------------------facebook
+			if(document.getElementById("chm1").checked==true){
+				document.cookie="chmr1="+"1"+";";
+			}
+			else{
+				document.cookie="chmr1="+"0"+";";
+			}
+			//-----------------------instagram
+			if(document.getElementById("chm2").checked==true){
+				document.cookie="chmr2="+"1"+";";
+			}
+			else{
+				document.cookie="chmr2="+"0"+";";
+			}
+			//-----------------------twitter
+			if(document.getElementById("chm3").checked==true){
+				document.cookie="chmr3="+"1"+";";
+			}
+			else{
+				document.cookie="chmr3="+"0"+";";
+			}
+			//---------------------------------regions
+			//-----------------------ua
+			if(document.getElementById("chreg1").checked==true){
+				document.cookie="chr1="+"1"+";";
+			}
+			else{
+				document.cookie="chr1="+"0"+";";
+			}
+			//-----------------------us
+			if(document.getElementById("chreg2").checked==true){
+				document.cookie="chr2="+"1"+";";
+			}
+			else{
+				document.cookie="chr2="+"0"+";";
+			}
+			//-----------------------cn
+			if(document.getElementById("chreg3").checked==true){
+				document.cookie="chr3="+"1"+";";
+			}
+			else{
+				document.cookie="chr3="+"0"+";";
+			}
+			//-----------------------fr
+			if(document.getElementById("chreg4").checked==true){
+				document.cookie="chr4="+"1"+";";
+			}
+			else{
+				document.cookie="chr4="+"0"+";";
+			}
+			//-----------------------jp
+			if(document.getElementById("chreg5").checked==true){
+				document.cookie="chr5="+"1"+";";
+			}
+			else{
+				document.cookie="chr5="+"0"+";";
+			}
+			//-----------------------pl
+			if(document.getElementById("chreg6").checked==true){
+				document.cookie="chr6="+"1"+";";
+			}
+			else{
+				document.cookie="chr6="+"0"+";";
+			}
+			document.cookie="all="+document.getElementById("vyvid").value+";";
+	    	}
+		    //-------------Запис cookies сторінок
+		    document.getElementById('navp1').addEventListener("click",function(){
+				document.cookie="page1="+"1"+";";
+			});
+			document.getElementById('navp2').addEventListener("click",function(){						   document.cookie="page2="+"1"+";";
+			});	
+		    document.getElementById('navp3').addEventListener("click",function(){						   document.cookie="page3="+"1"+";";
+			});
+		    document.getElementById('navp4').addEventListener("click",function(){						   document.cookie="page4="+"1"+";";
+			});
+		    //-------------Запис cookies мов
+		    document.getElementById('langua').addEventListener("click",function(){
+				document.cookie="lang1="+"1"+";";
+			});
+		    document.getElementById('langrus').addEventListener("click",function(){
+				document.cookie="lang2="+"1"+";";
+			});
+		    document.getElementById('langen').addEventListener("click",function(){
+				document.cookie="lang3="+"1"+";";
+			});
+		
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+  return matches ? decodeURIComponent(matches[1]) : "";
+}
+		 document.getElementById("i1").value=getCookie('c1');
+		 document.getElementById("i2").value=getCookie('c2');
+		 document.getElementById("i3").value=getCookie('c3');
+		 document.getElementById("i4").value=getCookie('c4');
+		 document.getElementById("i5").value=getCookie('c5');
+		 document.getElementById("i6").value=getCookie('c6');
+		 document.getElementById("diapvid").value=getCookie('c7');
+		 document.getElementById("diappo").value=getCookie('c8');
+		 document.getElementById("i9").value=getCookie('c9');
+		 document.getElementById("i12").value=getCookie('c12');
+		 document.getElementById("i13").value=getCookie('c13');
+		 document.getElementById("i14").value=getCookie('c14');
+		 document.getElementById("i15").value=getCookie('c15');
+		 document.getElementById("i16").value=getCookie('c16');
+		 var clcpage1=getCookie('page1');
+		//-------------Читання cookies сторінок
+		if(clcpage1==1){
+			document.getElementById('navp1').click();
+			document.cookie="page1="+"0"+";";
+		}
+		else{
+			clcpage1=0;
+		}
+		var clcpage2=getCookie('page2');
+		if(clcpage2==1){
+			document.getElementById('navp2').click();
+			document.cookie="page2="+"0"+";";
+		}
+		else{
+			clcpage2=0;
+		}
+		var clcpage3=getCookie('page3');
+		if(clcpage3==1){
+			document.getElementById('navp3').click();
+			document.cookie="page3="+"0"+";";
+		}
+		else{
+			clcpage3=0;
+		}
+		var clcpage4=getCookie('page4');
+		if(clcpage4==1){
+			document.getElementById('navp4').click();
+			document.cookie="page4="+"0"+";";
+		}
+		else{
+			clcpage4=0;
+		}
+		//-------------Читання cookies мов
+		var clclang1=getCookie('lang1');
+		if(clclang1==1){
+			document.getElementById('langua').click();
+			document.cookie="lang1="+"0"+";";
+		}
+		else{
+			clclang1=0;
+		}
+		var clclang2=getCookie('lang2');
+		if(clclang2==1){
+			document.getElementById('langrus').click();
+			document.cookie="lang2="+"0"+";";
+		}
+		else{
+			clclang2=0;
+		}
+		var clclang3=getCookie('lang3');
+		if(clclang3==1){
+			document.getElementById('langen').click();
+			document.cookie="lang3="+"0"+";";
+		}
+		else{
+			clclang3=0;
+		}
+		//-----------------------Перевірка чекбоксів
+		//-----------------------pdf
+		 var prov1=getCookie('ch1');
+	     if(prov1==1){
+			 document.getElementById("cht1").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht1").checked=false;
+		 }
+		//-----------------------txt
+		var prov2=getCookie('ch2');
+	     if(prov2==1){
+			 document.getElementById("cht2").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht2").checked=false;
+		 }
+		//-----------------------rtf
+		var prov3=getCookie('ch3');
+	     if(prov3==1){
+			 document.getElementById("cht3").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht3").checked=false;
+		 }
+		//-----------------------doc
+		var prov4=getCookie('ch4');
+	     if(prov4==1){
+			 document.getElementById("cht4").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht4").checked=false;
+		 }
+		//-----------------------html
+		var prov5=getCookie('ch5');
+	     if(prov5==1){
+			 document.getElementById("cht5").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht5").checked=false;
+		 }
+		//-----------------------djvu
+		var prov6=getCookie('ch6');
+	     if(prov6==1){
+			 document.getElementById("cht6").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht6").checked=false;
+		 }
+		//-----------------------fb2
+		var prov7=getCookie('ch7');
+	     if(prov7==1){
+			 document.getElementById("cht7").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht7").checked=false;
+		 }
+		//-----------------------rar
+		var prov8=getCookie('ch8');
+	     if(prov8==1){
+			 document.getElementById("cht8").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht8").checked=false;
+		 }
+		//-----------------------xls
+		var prov9=getCookie('ch9');
+	     if(prov9==1){
+			 document.getElementById("cht9").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht9").checked=false;
+		 }
+		//-----------------------ppt
+		var prov10=getCookie('ch10');
+	     if(prov10==1){
+			 document.getElementById("cht10").checked=true;
+		 }
+		 else{
+			  document.getElementById("cht10").checked=false;
+		 }
+		//---------------------------------merezhi
+		//-----------------------facebook
+		var provmer1=getCookie('chmr1');
+	     if(provmer1==1){
+			 document.getElementById("chm1").checked=true;
+		 }
+		 else{
+			  document.getElementById("chm1").checked=false;
+		 }
+		//-----------------------instagram
+		var provmer2=getCookie('chmr2');
+	     if(provmer2==1){
+			 document.getElementById("chm2").checked=true;
+		 }
+		 else{
+			  document.getElementById("chm2").checked=false;
+		 }
+		 //-----------------------twitter
+		 var provmer3=getCookie('chmr3');
+	     if(provmer3==1){
+			 document.getElementById("chm3").checked=true;
+		 }
+		 else{
+			  document.getElementById("chm3").checked=false;
+		 }
+         //---------------------------------regions
+		//-----------------------ua
+		 var provr1=getCookie('chr1');
+	     if(provr1==1){
+			 document.getElementById("chreg1").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg1").checked=false;
+		 }
+		//-----------------------us
+		 var provr2=getCookie('chr2');
+	     if(provr2==1){
+			 document.getElementById("chreg2").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg2").checked=false;
+		 }
+		//-----------------------cn
+		 var provr3=getCookie('chr3');
+	     if(provr3==1){
+			 document.getElementById("chreg3").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg3").checked=false;
+		 }
+		//-----------------------fr
+		 var provr4=getCookie('chr4');
+	     if(provr4==1){
+			 document.getElementById("chreg4").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg4").checked=false;
+		 }
+		//-----------------------jp
+		 var provr5=getCookie('chr5');
+	     if(provr5==1){
+			 document.getElementById("chreg5").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg5").checked=false;
+		 }
+		//-----------------------pl
+		 var provr6=getCookie('chr6');
+	     if(provr6==1){
+			 document.getElementById("chreg6").checked=true;
+		 }
+		 else{
+			  document.getElementById("chreg6").checked=false;
+		 }
+		 document.getElementById("vyvid").value=getCookie('all');
+		
+	
+	}
+		
+		
+	</script>
+</head>
+
+<body onLoad="strt()">
+</body>
+</html>

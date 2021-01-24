@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 2</title>
+</head>
+<style>
+	body{
+		margin: 0;
+	}
+	#maindiv{
+		background-color: yellowgreen;
+		width: 80%;
+		margin: 0 auto;
+	}
+	#dv1{
+		position: fixed;
+		top:0;
+		left: 0;
+		height: 50px;
+		width: 100%;
+		display: flex;
+		align-items:center; 
+		justify-content: flex-end;
+	}
+	#dv2{
+		margin: 0 auto;
+		margin-top: 20px;
+		height: auto;
+		width: 80%;
+		font-size: 0;
+	}
+	.lang{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+		border: 2px solid #339FD4;
+		border-radius: 23px;
+		cursor: pointer;
+	}
+	#langua{
+		background-image: url(1-1-2.png);
+		background-position: center;
+		background-size: contain;
+	}
+	#langua:hover{
+		background-image:url(1-1-1.png);
+	}
+	#langrus{
+		background-image:url(2-1-2.png);
+		background-position: center;
+		background-size: contain;
+	}	
+	#langrus:hover{
+		background-image:url(2-2-2.png);
+	}
+	#langen{
+		background-image:url(3-1-3.png);
+		background-position: center;
+		background-size: contain;
+	}
+	#langen:hover{
+		background-image:url(3-3-3.png);
+	}
+	#logo{
+		margin: 0 auto;
+		background-image:url(logo.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 100px;
+		width: auto;
+	}
+	#nav{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 600px;
+		height: 20px;
+		margin: 0 auto;
+		margin-bottom: 5px;
+		margin-top: 10px;
+	}
+	.navp{
+		font-size: 11pt;
+		font-family: Verdana;
+		margin: 0px;
+		display: inline-block;
+		cursor: pointer;
+		margin-right: 10px;
+		text-align: center;
+		border-radius: 20px;
+		border: 2px solid #339FD4;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.gsc-control-cse.gsc-control-cse-uk{
+		background-color: white;
+		border: 1px solid #888888;
+		border-radius: 20px;
+	}
+	#navp1{
+		width: 140px;
+	}
+	</style>
+	<script type="text/javascript">
+		function res(){
+			var div = document.createElement('div');
+	    	div.id="dv1";
+		    document.body.appendChild(div);
+		    	
+		    var div = document.createElement('div');
+		    div.className="lang";
+		    div.id="langua";
+		    dv1.appendChild(div);
+		    
+		    var div = document.createElement('div');
+		    div.className="lang";
+		    div.id="langrus";
+		    dv1.appendChild(div);
+		    
+		    var div = document.createElement('div');
+		    div.className="lang";
+		    div.id="langen";
+		    dv1.appendChild(div);
+			
+			var div = document.createElement('div');
+		    div.id="dv2";
+		    document.body.appendChild(div);
+			
+			var div = document.createElement('div');
+		    div.id="logo";
+		    dv2.appendChild(div);
+			
+			var div = document.createElement('div');
+		    div.id="nav";
+		    dv2.appendChild(div);
+		    
+		    var p = document.createElement('p');
+		    p.textContent="Уточнити запит";
+		    p.className="navp";
+		    p.id="navp1";
+		    nav.appendChild(p);
+	
+			dv2.appendChild(nr);
+			}
+		   
+	</script>
+<body onLoad="res()">
+<div>
+	<script>
+  (function() {
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=014609432202407487452:ermobbaaahg&q=zapros';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchresults-only id="nr"></gcse:searchresults-only>
+</div>
+</body>
+</html>
